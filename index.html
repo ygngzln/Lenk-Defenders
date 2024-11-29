@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Game</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="bef">
+    <div id="title">Lenk Defenders</div>
+    <div id="ins">Instructions: </div>
+    <div id="instructions">WASD for movement <br> SPACE or Left Click (LMB) to attack <br> Q to buy the next weapon <br> E to buy a heal (10 COINS for 5 HP)</div>
+    <button id="btn" onclick="startGame()">BEGIN</button>
+  </div>
+  
+  <div id="bar"><span class="bar" id="up">Next Weapon ⚔️ - <span id="next">Broadsword (25 Coins)</span></span><span id="coins" class="bar">Coins 🪙 - <span id="money">0</span></span><span class="bar" id="hp">Health ❤️ - <span id="health">100</span></span></div>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+
+    #bef {
+      text-align: center;
+      position: absolute;
+      z-index: 4;
+      background: url("grasstile2.png");
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+    
+    #bar {
+      background-color: rgb(110,110,110);
+      min-height: 65px;
+      padding: 0 20px;
+      position: absolute;
+      width: 100%;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      font-family: 'Teko', sans-serif;
+      font-size: 40px;
+      font-weight: 750;
+      display: table;
+      z-index: 2
+    }
+
+    #title {
+      position: relative;
+      top: 15px;
+      font-size: 24px;
+      font-family: 'Monaco', monospace;
+      font-weight: bold;
+    }
+
+    #ins {
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: 750;
+    }
+
+    #instructions {
+      margin-top: 5px
+    }
+
+    #btn {
+      margin-top: 10px;
+      background-color: lime;
+      color: darkgreen;
+      border: 2px solid black;
+      border-radius: 2px;
+      font-size: 20px;
+    }
+
+    #btn:hover {
+      font-size: 21px;
+      cursor: pointer;
+    }
+
+    .bar {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .bar, #pur {
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    canvas {
+      background: url("grasstile2.png");
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      max-height: calc(100% - 65px);
+      width: 100%;
+    }
+  </style>
+  <script src="script.js"></script>
+</body>
+
+</html>
